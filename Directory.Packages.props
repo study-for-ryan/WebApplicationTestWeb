@@ -9,7 +9,7 @@
     <PackageVersion Include="HtmlAgilityPack" Version="1.11.46" />
     <PackageVersion Include="Microsoft.Data.SqlClient" Version="2.1.4" />
     <!-- Newtonsoft.Json < 13.0.2 存在漏洞 (GHSA-5crp-9r3c-p9vr), 修复版本 13.0.2+ -->
-    <PackageVersion Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
     <!-- RestSharp <= 110.1.0 存在信息泄露漏洞, 修复版本 110.2.0+ -->
     <PackageVersion Include="RestSharp" Version="106.12.0" />
     <!-- SixLabors.ImageSharp 2.x 存在多个漏洞, 修复版本 3.1.11+ -->
