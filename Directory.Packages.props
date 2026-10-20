@@ -13,6 +13,6 @@
     <!-- RestSharp <= 110.1.0 存在信息泄露漏洞, 修复版本 110.2.0+ -->
     <PackageVersion Include="RestSharp" Version="106.12.0" />
     <!-- SixLabors.ImageSharp 2.x 存在多个漏洞, 修复版本 3.1.11+ -->
-    <PackageVersion Include="SixLabors.ImageSharp" Version="2.1.2" />
+    <PackageVersion Include="SixLabors.ImageSharp" Version="4.1.3" />
   </ItemGroup>
 </Project>
