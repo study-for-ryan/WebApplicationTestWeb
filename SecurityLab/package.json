@@ -5,7 +5,7 @@
   "description": "Security lab only: intentionally outdated/vulnerable npm dependencies to trigger Dependabot alerts. Do NOT install into production.",
   "dependencies": {
     "lodash": "4.17.15",
-    "axios": "0.18.0",
+    "axios": "1.20.0",
     "minimist": "1.2.0",
     "jquery": "3.4.0",
     "moment": "2.24.0",
