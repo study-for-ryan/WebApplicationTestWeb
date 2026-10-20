@@ -1,0 +1,30 @@
+@page
+@model WebApplicationTestWeb.Pages.LabModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Security Lab";
+}
+
+<h2>⚠️ Security Lab — 故意漏洞演示端点</h2>
+<p class="text-muted">本页所有输出均为演示数据，不存在真实后端。漏洞实现见 <code>SecurityLab/VulnerableEndpoints.cs</code>。</p>
+
+<table class="table table-sm table-bordered align-middle">
+    <thead>
+        <tr><th>类别</th><th>示例请求</th><th>说明</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>CWE-89</td><td><code>?handler=sql&amp;u=admin'--&amp;p=x</code></td><td>SQL 注入（拼接 SQL）</td></tr>
+        <tr><td>CWE-327</td><td><code>?handler=hash&amp;pwd=secret</code></td><td>MD5 处理口令</td></tr>
+        <tr><td>CWE-330</td><td><code>?handler=token</code></td><td>Random 生成"会话令牌"</td></tr>
+        <tr><td>CWE-611</td><td><code>?handler=xxe&amp;xml=&lt;root&gt;hi&lt;/root&gt;</code></td><td>XXE 解析（允许 DTD）</td></tr>
+        <tr><td>CWE-502</td><td><code>?handler=deserialize&amp;json={}</code></td><td>TypeNameHandling 反序列化</td></tr>
+    </tbody>
+</table>
+
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <div class="alert alert-secondary">
+        <strong>输出：</strong>
+        <pre class="mb-0"><code>@Model.Result</code></pre>
+    </div>
+}

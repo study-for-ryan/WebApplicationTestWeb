@@ -1,0 +1,24 @@
+# Dependabot 配置
+# version: 2 配置三块能力:
+#  1. package-ecosystem "nuget"   -> 扫描 .csproj / Directory.Packages.props, 生成漏洞告警+升级 PR
+#  2. package-ecosystem "npm"     -> 扫描 SecurityLab/package.json 里的过期依赖, 生成告警+升级 PR
+#  3. package-ecosystem "github-actions" -> 升级 workflow 里的 action 版本
+# 告警( Malware / Vulnerabilities )需要在仓库 Settings -> Advanced Security 开启 Dependabot alerts 后才会出现。
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "npm"
+    directory: "/SecurityLab"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

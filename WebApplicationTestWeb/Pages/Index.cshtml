@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card border-warning">
+            <div class="card-header">
+                <strong>⚠️ Security Lab</strong> — 故意漏洞演示端点（仅用于测试 GitHub 扫描，勿在生产模仿）
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>类别</th>
+                            <th>端点</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>CWE-89</td><td><a href="/SecurityLab?handler=sql&amp;u=admin'--&amp;p=x"><code>/SecurityLab?handler=sql&amp;u=admin'--&amp;p=x</code></a></td><td>SQL 注入（拼接 SQL 展示）</td></tr>
+                        <tr><td>CWE-327</td><td><a href="/SecurityLab?handler=hash&amp;pwd=secret"><code>/SecurityLab?handler=hash&amp;pwd=secret</code></a></td><td>MD5 处理口令</td></tr>
+                        <tr><td>CWE-330</td><td><a href="/SecurityLab?handler=token"><code>/SecurityLab?handler=token</code></a></td><td>Random 生成"会话令牌"</td></tr>
+                        <tr><td>CWE-611</td><td><a href="/SecurityLab?handler=xxe&amp;xml=%3Croot%3Ehi%3C/root%3E"><code>/SecurityLab?handler=xxe</code></a></td><td>XXE 解析（允许 DTD）</td></tr>
+                        <tr><td>CWE-502</td><td><a href="/SecurityLab?handler=deserialize&amp;json={}"><code>/SecurityLab?handler=deserialize&amp;json={}</code></a></td><td>TypeNameHandling 反序列化</td></tr>
+                    </tbody>
+                </table>
+                <p class="mb-0 text-muted small">
+                    漏洞代码: <code>SecurityLab/VulnerableEndpoints.cs</code> ·
+                    质量样例: <code>SecurityLab/CodeQualitySamples.cs</code> ·
+                    详细说明见 <code>docs/README-security-lab.md</code>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
