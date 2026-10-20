@@ -7,7 +7,7 @@
     "lodash": "4.17.15",
     "axios": "0.18.0",
     "minimist": "1.2.0",
-    "jquery": "3.4.0",
+    "jquery": "4.0.0",
     "moment": "2.24.0",
     "!! 触发 Dependabot Malware 告警的包, 见 GHSA-87gv-mmww-whrr": "",
     "@an1mshnpmb9c84920/gat-scope-target-125ec19a": "1.0.0"
