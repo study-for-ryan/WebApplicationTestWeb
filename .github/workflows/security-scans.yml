@@ -1,4 +1,4 @@
-﻿name: DevSkim security lint
+name: DevSkim security lint
 
 on:
   push:
@@ -24,6 +24,6 @@ jobs:
           directory-to-scan: .
 
       - name: Upload DevSkim SARIF
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: devskim.sarif
