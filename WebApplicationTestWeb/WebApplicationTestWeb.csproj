@@ -5,7 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-  <ItemGroup>
+
+  <ItemGroup>
     <!-- ⚠️ 安全实验室专用: 故意引用含已知漏洞的旧版本, 用于触发 Dependabot 告警 (版本集中在 Directory.Packages.props) -->
     <PackageReference Include="HtmlAgilityPack" />
     <PackageReference Include="Microsoft.Data.SqlClient" />
