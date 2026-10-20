@@ -1,4 +1,4 @@
-﻿name: DevSkim security lint
+name: DevSkim security lint
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       security-events: write
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run DevSkim
         uses: microsoft/DevSkim-Action@v1
